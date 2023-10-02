@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <canvas id="canvas" style="width: 600px; height: 300px; border: 1px solid; background-color: pink;"></canvas>
+</head>
+<body>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(20,20,50,50)
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(40,40,50,50)
+
+        ctx.fillStyle = "green";
+        ctx.fillRect(60,60,50,50)
+
+        ctx.fillText("MY CANVAS",120,20)
+        ctx.strokeText("MY CANVAS",120,20)
+
+        ctx.beginPath();
+        ctx.moveTo(150,50)
+        ctx.lineTo(200,50);
+        ctx.strokeStyle  = "yellow";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(150,50)
+        ctx.lineTo(120,70);
+        ctx.strokeStyle  = "red";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(200,50)
+        ctx.lineTo(230,70);
+        ctx.strokeStyle  = "green";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(120,70)
+        ctx.lineTo(120,90);
+        ctx.strokeStyle  = "purple";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(230,70)
+        ctx.lineTo(230,90);
+        ctx.strokeStyle  = "blue";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(120,90)
+        ctx.lineTo(230,90);
+        ctx.strokeStyle  = "tomato";
+        ctx.arc(210,100,Math.PI*2,0,40);
+        ctx.stroke();
+
+
+
+
+        
+
+    </script>
+</body>
+</html>
